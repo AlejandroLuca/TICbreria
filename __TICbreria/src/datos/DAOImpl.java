@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import beans.Empleado;
 import beans.Libro;
 import beans.Ventas;
 import utilidades.Conexion;
@@ -87,13 +88,21 @@ public class DAOImpl implements IDAO {
 		this.eliminarLibro(aux);
 	}
 	public void eliminarLibro(Libro l){
-		
+		int pos = encontrarLibro(l);
+		if(pos == -1){
+			System.out.println("No encontrado");
+		}else{
+			System.out.println("Encontrado y eliminado");
+			libro.remove(pos);
+		}
 	}
 
 	@Override
 	public void listarLibro() {
 		// TODO Auto-generated method stub
-		
+		for(Libro l: libro){
+			System.out.println(l.toString());
+		}
 	}
 
 	@Override
@@ -130,6 +139,18 @@ public class DAOImpl implements IDAO {
 	public void insertarCliente() {
 		// TODO Auto-generated method stub
 		
+	}
+	public int encontrarLibro(Libro l){
+		int encontrado = -1;
+        for (int i = 0; i < libro.size(); i++) {
+           Libro aux = libro.get(i);
+            System.out.println(aux.getNombre());
+            if (aux.equals(l)) {
+                System.out.println("encontrado!!"); // encontrado
+                encontrado = i;
+            }
+        }
+        return encontrado;
 	}
 }
 

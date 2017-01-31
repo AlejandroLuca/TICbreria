@@ -1,12 +1,11 @@
 package beans;
 
-import datos.enumerados.Generos;
 
 public class Libro {
 	private String autor;
 	private String editorial;
 	private int id_libro;
-	private Generos genero;
+	private String genero;
 	private String nombre;
 	private String ISBN;
 	private double precio;
@@ -15,7 +14,7 @@ public class Libro {
 		
 	}
 
-	public Libro(String autor, String editorial, int id_libro, Generos genero, String nombre, String iSBN,
+	public Libro(String autor, String editorial, int id_libro, String genero, String nombre, String iSBN,
 			double precio) {
 		super();
 		this.autor = autor;
@@ -59,11 +58,11 @@ public class Libro {
 		this.id_libro = id_libro;
 	}
 
-	public Generos getGenero() {
+	public String getGenero() {
 		return genero;
 	}
 
-	public void setGenero(Generos genero) {
+	public void setGenero(String genero) {
 		this.genero = genero;
 	}
 

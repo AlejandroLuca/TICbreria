@@ -8,7 +8,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import beans.Empleado;
 import beans.Libro;
 import beans.Ventas;
 import utilidades.Conexion;

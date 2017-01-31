@@ -1,29 +1,18 @@
 package beans;
 
-import datos.enumerados.Generos;
 
 public class Genero {
-	private Generos genero;
 	private int id_genero;
-	
+	private String genero;
+	public String getGenero() {
+		return genero;
+	}
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
 	public Genero(){
 		
 	}
-
-	public Genero(Generos genero, int id_genero) {
-		super();
-		this.genero = genero;
-		this.id_genero = id_genero;
-	}
-
-	public Generos getGenero() {
-		return genero;
-	}
-
-	public void setGenero(Generos genero) {
-		this.genero = genero;
-	}
-
 	public int getId_genero() {
 		return id_genero;
 	}

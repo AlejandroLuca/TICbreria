@@ -11,6 +11,7 @@ import java.util.List;
 import beans.Libro;
 import beans.Ventas;
 import utilidades.Conexion;
+import utilidades.LecturaDatos;
 
 public class DAOImpl implements IDAO {
 
@@ -81,6 +82,11 @@ public class DAOImpl implements IDAO {
 	@Override
 	public void eliminarLibro() {
 		// TODO Auto-generated method stub
+		String title = LecturaDatos.recogeString("Introduce el titulo a eliminar: ");
+		Libro aux = new Libro(title);
+		this.eliminarLibro(aux);
+	}
+	public void eliminarLibro(Libro l){
 		
 	}
 
